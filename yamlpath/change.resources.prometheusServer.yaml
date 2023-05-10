@@ -1,0 +1,8 @@
+resources:
+  prometheusServer:
+    limits:
+      cpu: "55"
+      memory: 128Gi
+    requests:
+      cpu: "30"
+      memory: 64Gi

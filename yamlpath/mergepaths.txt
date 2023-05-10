@@ -1,0 +1,2 @@
+spec.providerSpec.value.helmReleases[name=stacklight].values
+.

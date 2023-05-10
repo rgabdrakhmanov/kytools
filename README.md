@@ -15,6 +15,14 @@ This document describes Bash functions included in the repository. Functions are
 1. Install dependancies listed above and those which are not listed, as you will probably discover, because I forgot them or you use something which is not Ubuntu 22.04
 2. Clone repo, go to the dir and source the file with `source kytools.sh`
 
+Additionally to use `kysyncmerge()`, `kymerge()`, `kyindent()` you have to:
+
+4. Create `~/yamlpath` dir
+5. In the `~/yamlpath` dir create `mergepaths.txt` with at least one line which consist of a dot `.`. This is a file with the list of YAML paths indicating where in the source file your change is to be merged, where `.` mean top of the YAML file
+6. In the `~/yamlpath` dir create `yaml` file or files describing your desired changes to the Kubernetes resources
+
+Few examples of `yamlpath` dir contents are included, so instead of creating it can be copied to `~/yamlpath`.
+
 ## Description
 
 ### kysyncmerge()

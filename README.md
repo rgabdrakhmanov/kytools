@@ -8,7 +8,7 @@ This document describes Bash functions included in the repository. Functions are
 - `yq`: a command-line YAML processor. See [https://github.com/mikefarah/yq](https://github.com/mikefarah/yq)
 - `yaml-diff`, `yaml-validate`, `yaml-merge`: a command-line tools from YAML Path project. See [https://github.com/wwkimball/yamlpath/wiki/Command-Line-(CLI)-Tools](https://github.com/wwkimball/yamlpath/wiki/Command-Line-(CLI)-Tools)
 - `kubectl`: the Kubernetes command-line tool. It must be installed and configured with access to a Kubernetes cluster.
-- `kustomize`: a command-line tool used to customize Kubernetes objects. See [https://kubectl.docs.kubernetes.io/installation/kustomize/] (https://kubectl.docs.kubernetes.io/installation/kustomize/)
+- `kustomize`: a command-line tool used to customize Kubernetes objects. See [https://kubectl.docs.kubernetes.io/installation/kustomize/](https://kubectl.docs.kubernetes.io/installation/kustomize/)
 
 ## Installation :D
 

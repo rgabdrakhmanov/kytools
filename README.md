@@ -17,7 +17,7 @@ This document describes Bash functions included in the repository. Functions are
 
 ## Description
 
-### kysyncmerge
+### kysyncmerge()
 
 The `kysyncmerge` is a simple combination of the other functions mentioned here. It saves the interactively selected resource from the Kubernetes cluster to a local YAML file using the `kysync`, then merges the interactively selected changes using `kymerge` function. It then removes fields using the `kyclean`, and finally indents the resulting YAML file using the `kyindent`.
 
@@ -101,7 +101,7 @@ The `tmppath` variable is used to store the temporary path for merging and is se
 tmppath=~/yamlpath
 ```
 
-### kyclean
+### kyclean()
 
 The `kyclean` function removes the non-essential parts of a Kubernetes object YAML file to make it suitable for editing, version control, or sharing. The removed parts include `.status`, `.metadata.uid`, `.metadata.generation`, and `.metadata.creationTimestamp`. The function prompts the user to select a YAML file interactively using `fselect()`, if it was not provided as parameter.
 
@@ -113,7 +113,9 @@ kyclean [--file=FILEPATH]
 
 - `--file=FILEPATH` (optional): The path to the Kubernetes object YAML file. If not specified, `fselect()` will be used to select a file interactively.
 
-### kyindent (required as a temporary workaround to fix indentation of resulted files)
+### kyindent()
+
+!!! Required as a temporary workaround to fix indentation of resulted files
 
 The `kyindent` function applies "Kubernetes-style" indentation to a YAML file with the help of `kubectl kustomize`. It prompts the user to select a YAML file interactively using `fselect()` if it was not provided as parameter. The indentation is performed by creating a temporary directory with a unique name to avoid overwriting existing files, creating a temporary `kustomization.yaml` file in the temporary directory, and populating it with the path to the YAML file. Finally, `kubectl kustomize` is used to perform the indentation. The temporary directory and files are then removed.
 
@@ -130,6 +132,3 @@ The `tmppath` variable is used to store the temporary files and is set to `~/yam
 ```bash
 tmppath=~/yamlpath
 ```
-
-
-

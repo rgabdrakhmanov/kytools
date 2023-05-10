@@ -1,6 +1,6 @@
 # README
 
-This document describes Bash functions included in the repository. Functions are meant to automate repetitive operations in situations, when same change has to be applied to a similar resources in multiple Kubernetes clusters in the abscense of the up-to-date configuration files describing current state this resources. Especially good for complex custom resources ~500 lines long (wink wink). Each function was made to be usable, and probably even useful, on its own.
+This document describes Bash functions included in the repository. Functions are meant to automate repetitive operations in situations, when same change has to be applied to a similar resources in multiple Kubernetes clusters in the abscense of the up-to-date configuration files describing current state of this resources. Especially good for complex custom resources ~500 lines long (wink wink). Each function was made to be usable, and probably even useful, on its own.
 
 ## Dependencies
 
